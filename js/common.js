@@ -54,3 +54,17 @@ $("#gnb li").on('click', function() {
     n = idName.substr(idLength-1,1)
     console.log(n)
   })
+let state = 1;
+$(window).on('scroll', function () {
+  if ( $(window).scrollTop() >= 1700 && state == 1 ) {
+    state = 0;
+    $('.work > .cesco').animate({marginRight:0, opacity:1}, 700)
+  }
+})
+let state2 = 1;
+$(window).on('scroll', function () {
+  if ( $(window).scrollTop() >= 1950 && state2 == 1 ) {
+    state2 = 0;
+    $('.work > .soon').animate({marginLeft:0, opacity:1}, 700)
+  }
+})
